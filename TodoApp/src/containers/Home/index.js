@@ -25,6 +25,8 @@ class Home extends Component {
         }
     }
 
+
+
     componentDidMount() {
         this.retrieveData()
 
