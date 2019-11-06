@@ -96,7 +96,6 @@ class AddPerson extends Component {
 
 
     render() {
-
         return (
             <View style={{ flex: 1, alignItems: 'center', }}>
                 <ScrollView keyboardShouldPersistTaps="handled" style={{ width: '100%', }} contentContainerStyle={{ justifyContent: 'center', alignItems: 'center' }}>
