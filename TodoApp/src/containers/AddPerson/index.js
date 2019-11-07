@@ -47,6 +47,9 @@ class AddPerson extends Component {
                                 img: '',
                                 size: ''
                             })
+                            const retrieveData = this.props.navigation.getParam("retrieveData")
+                            if (retrieveData)
+                                retrieveData()
                         })
 
                 }
