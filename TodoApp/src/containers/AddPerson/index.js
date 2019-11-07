@@ -66,26 +66,30 @@ class AddPerson extends Component {
 
     _openPicker = () => {
         ImagePicker.openPicker({
-            width: 300,
+            width: 400,
             height: 400,
-            cropping: true
+            cropping: true,
+            includeBase64: true
         }).then(image => {
             this.setState({
-                img: { uri: image.path },
+                // img: { uri: image.path },
+                img: { uri: `data:image/jpeg;base64,${image.data}`},
                 modalVisible: false
             })
         });
     }
-
+    
     _openCamera = () => {
         ImagePicker.openCamera({
-            width: 300,
+            width: 400,
             height: 400,
             cropping: true,
+            includeBase64: true
         }).then(image => {
             this.setState({
-                img: { uri: image.path },
-                modalVisible: false
+                // img: { uri: image.path },
+                img: { uri: `data:image/jpeg;base64,${image.data}`},
+                modalVisible: false,
             })
         })
             .catch(error => {
